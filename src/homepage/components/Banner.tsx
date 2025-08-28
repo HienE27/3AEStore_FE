@@ -1,38 +1,72 @@
 import React from "react";
 
 const Banner = () => {
-    return (
-        <div>
-            <section className="padding-bottom">
-                <div className="row">
-                    <aside className="col-md-6">
-                        <div className="card card-banner-lg bg-dark">
-                            <img src="images/banners/banner4.jpg" className="card-img opacity" alt="Banner 4" />
-                            <div className="card-img-overlay text-white">
-                                <h2 className="card-title">Big Deal on Clothes</h2>
-                                <p className="card-text" style={{ maxWidth: "80%" }}>
-                                    This is a wider card with text below and Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ab quae nihil praesentium impedit libero possimus id vero
-                                </p>
-                                <button className="btn btn-light">Discover</button>
-                            </div>
-                        </div>
-                    </aside>
-                    <div className="col-md-6">
-                        <div className="card card-banner-lg bg-dark">
-                            <img src="images/banners/banner5.jpg" className="card-img opacity" alt="Banner 5" />
-                            <div className="card-img-overlay text-white">
-                                <h2 className="card-title">Great Bundle for You</h2>
-                                <p className="card-text" style={{ maxWidth: "80%" }}>
-                                    Card with text below and Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ab quae nihil praesentium impedit libero possimus id vero
-                                </p>
-                                <button className="btn btn-light">Discover</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  return (
+    <>
+      <style>{`
+        .banner-section {
+          background-color: #f7f7f7;
+          padding: 40px 0;
+        }
+        
+        .banner-container {
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 0 1rem;
+          display: flex;
+          justify-content: center;
+          gap: 1.5rem;
+        }
+        
+        .banner-item {
+          width: 600px;
+          height: 370px;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+          border-radius: 8px;
+          overflow: hidden;
+          background: #fff;
+          flex-shrink: 0;
+        }
+        
+        .banner-item img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+          .banner-container {
+            flex-direction: column;
+            gap: 1rem;
+          }
+          
+          .banner-item {
+            width: 100%;
+            height: 200px;
+          }
+        }
+      `}</style>
+
+      <section className="banner-section">
+        <div className="banner-container">
+          <div className="banner-item">
+            <img
+              src="images/banners/nho1.png"
+              alt="Banner 1"
+            />
+          </div>
+
+          <div className="banner-item">
+            <img
+              src="images/banners/nho2.png"
+              alt="Banner 2"
+            />
+          </div>
         </div>
-    );
-}
+      </section>
+    </>
+  );
+};
 
 export default Banner;

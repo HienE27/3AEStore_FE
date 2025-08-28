@@ -439,7 +439,7 @@ p:last-child {
   color: #ff6a00; }
 
 .search-header {
-  border: 2px solid #ff6a00;
+  border: 2px solid #007bff;
   border-radius: 0.55rem; }
   .search-header .form-control, .search-header .custom-select {
     border-color: transparent; }

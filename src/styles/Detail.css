@@ -1,0 +1,43 @@
+/* Detail.css */
+@keyframes scrollRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.related-carousel-track {
+  display: flex;
+  gap: 20px;
+  animation: scrollRight 40s linear infinite;
+  width: fit-content;
+}
+
+.related-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.related-product-card {
+  flex: 0 0 auto;
+  width: 280px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.related-product-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(33, 150, 243, 0.15);
+}
+
+.related-carousel-container {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+  mask: linear-gradient(to right, transparent 0%, white 8%, white 92%, transparent 100%);
+}
